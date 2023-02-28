@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Perfection</title>
+
+    <!-- Vendor CSS Files -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div style="position:fixed;  opacity: 0;">
+        Scroll Direction :
+        <span id="direction"></span>
+    </div>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex">
+            <a class="navbar-brand" href="#">
+                <img src="logo/logo.png" alt="" class="d-inline-block align-text-top">
+            </a>
+            <nav id="navbar" class="navbar ms-auto">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
+                    <li><a class="nav-link scrollto" href="#about">ABOUT US</a></li>
+                    <li><a class="nav-link scrollto" href="#projects">PROJECTS</a></li>
+                    <li><a class="nav-link scrollto" href="#hwork">HOW WE WORK</a></li>
+                    <li><a class="nav-link scrollto" href="#">ENG/GR</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- End navbar -->
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="s1">
+        <div id="hero" class="hero route bg-image" style="background-image: url(img/hero_image.jpg)">
+            <div class="hero-content display-table">
+                <div class="table-cell">
+                    <div class="container">
+                        <!--<p class="display-6 color-d">Hello, world!</p>-->
+                        <h1 class="hero-title">Perfection</h1>
+                        <p class="hero-subtitle">Meet <span id="high">High</span> <span class="typed"
+                                data-typed-items="Standards, Expectations, Quality"></span></p>
+                        <h3 class="hero-subtext">The website agency you want to trust</h3>
+                        <a class="contact-button button-all" href="/contact-us" role="button">Contact Us</a>
+
+                        <a href="#about">
+                            <div class="scroll-down"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Hero Section -->
+    </section>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about-mf route">
+        <div class="container">
+            <div class="row">
+                <div class="about-us-text col-sm-4">
+                    <h1 class="about-title">
+                        About us
+                    </h1>
+                    <p class="about-par">
+                        We take pride in our attention to detail and our commitment to excellence, ensuring that each
+                        project is
+                        delivered on
+                        time and to the highest standard. Our aim is to provide our clients with the best possible
+                        service
+                        and
+                        support, from the
+                        initial consultation to the final product.
+                    </p>
+                    <div class="about-des1 ms-auto">Let's make your digital</div>
+                    <div class="about-des2 ms-auto">DREAM</div>
+                    <a class="hired-button button-all" href="/contact.html" role="button">HIRED US</a>
+                </div>
+                <div id="video" class="video-conainet col-sm-8">
+                    <div class="my-video">
+                        <video width="950" height="690" playsinline="playsinline" loop autoplay controls id="my-video"
+                            class="video-js">
+                            <source src="videomp.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Projects Section ======= -->
+    <section id="projects" class="sect-pt4 route">
+        <div class="container">
+            <h1 class="projects-title">
+                Our Latest Cases.
+            </h1>
+            <div class="image-stack">
+                <div id="image-1" class="row image-container">
+                    <img class="col-sm-8" src="Projects/travelling_blog.png" alt="Travel Agency">
+                    <div class="overlay col-sm-4 ms-auto">Travel Agency <br><a href="#">View More</a></div>
+                </div>
+                <div id="image-2" class="row image-container">
+                    <img class="col-sm-8" src="Projects/villa_agency.jpg" alt="Villa Agency">
+                    <div class="overlay col-sm-4 ms-auto">Villa Agency <br><a href="#">View More</a></div>
+                </div>
+                <div id="image-3" class="row image-container">
+                    <img class="col-sm-8" src="Projects/educational.png" alt="Online Courses">
+                    <div class="overlay col-sm-4 ms-auto">Online Courses <br><a href="#">View More</a></div>
+                </div>
+                <div id="image-4" class="row image-container">
+                    <img class="col-sm-8" src="Projects/barber_shop.jpg" alt="Barber Shop">
+                    <div class="overlay col-sm-4 ms-auto">Barber Shop <br><a href="#">View More</a></div>
+                </div>
+                <div id="image-5" class="row image-container">
+                    <img class="col-sm-8" src="Projects/photo_blog.png" alt="Online Magazine">
+                    <div class="overlay col-sm-4 ms-auto">Online Magazine <br><a href="#">View More</a></div>
+                </div>
+                <a class="projects-button button-all ms-auto" href="/projects" role="button">See All Projects</a>
+            </div>
+        </div>
+    </section>
+    <!-- ======= End Projects Section ======= -->
+
+    <!-- ======= How we work Section ======= -->
+    <section id="hwork" class="hwork sect-pt4 route">
+        <div class="container">
+            <h2 class="hwork-title">
+                Discover how we work that help <br>you to take your industry to <br><span>Perfection.</span>
+            </h2>
+            <a class="hwork-button button-all" href="/how-we-work" role="button">How we Perfected</a>
+
+            <!-- <div class="wrapper">
+                <div class="link_wrapper">
+                    <a class="hwork-a" href="#">Hover Me!</a>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                            <path
+                                d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        <p class="hwork-par">ELEVATE YOUR DIGITAL PRESENCE WITH<br>MINI PERFECTION</p>
+    </section>
+    <!-- ======= End How we work Section ======= -->
+</body>
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/typed.js/typed.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="index.js">
+
+</script>
+
+</html>
