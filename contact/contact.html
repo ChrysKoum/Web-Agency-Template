@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Perfection</title>
+
+    <!-- Vendor CSS Files -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!--Fontawesome-Icons-->
+    <script src="https://kit.fontawesome.com/9b12e39ef1.js" crossorigin="anonymous"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="contact.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-contact">
+        <div class="row">
+            <div id="space-left" class="col-md-1"></div>
+            <div class="col-md-6">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/logo/logo.png" alt="" class="d-inline-block align-text-top">
+                </a>
+                <h1 class="contact-title">CONTACT US</h1>
+                <p class="contact-par">The <span>best</span> way to solve all your questions</p>
+                <form action="https://formspree.io/f/xoqzwlnp" method="POST">
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                                <input class="form-control" id="name" placeholder="Your name" name="name" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Type your subject line">
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                                <input type="email" class="form-control" name=" email" id="email"
+                                    placeholder="Your Email Address" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea id="message" class="form-control" name="message" rows="6"
+                                    placeholder="Type your Message Details Here..."></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center button-area">
+                            <button type="submit" name="submit" id="contact-submit" data-submit="...Sending"
+                                class="button button-a button-big button-rouded">Send
+                                Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="contact-right" class="col-md-5 d-flex justify-content-end align-items-center">
+                <div id="aqua-box"></div>
+                <div id="info">
+                    <h3 class="mb-4">Info</h3>
+                    <span class="d-flex">
+                        <i class="fa-sharp fa-solid fa-envelope"></i>
+                        <div class="margin-div">miniperfection@gmail.com</div>
+                    </span>
+                    <span class="d-flex">
+                        <i class="fa-sharp fa-solid fa-phone"></i>
+                        <div class="margin-div">+309876543210</div>
+                    </span>
+                    <span class="d-flex">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <div class="margin-div">Thessaloniki, Greece</div>
+                    </span>
+                    <span class="d-flex">
+                        <i class="fa-sharp fa-solid fa-clock"></i>
+                        <div class="margin-div">10:00-22:00</div>
+                    </span>
+                </div>
+                <div id="blue-shape"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const contactRightDiv = document.getElementById("contact-right");
+    const originalContent = contactRightDiv.innerHTML;
+
+    const infoHTML = `<h3 class="mb-4">Info</h3>
+                  <span class="d-flex">
+                      <i class="fa-sharp fa-solid fa-envelope"></i>
+                      <div class="margin-div">miniperfection@gmail.com</div>
+                  </span>
+                  <span class="d-flex">
+                      <i class="fa-sharp fa-solid fa-phone"></i>
+                      <div class="margin-div">+309876543210</div>
+                  </span>
+                  <span class="d-flex">
+                      <i class="fa-sharp fa-solid fa-location-dot"></i>
+                      <div class="margin-div">Thessaloniki, Greece</div>
+                  </span>
+                  <span class="d-flex">
+                      <i class="fa-sharp fa-solid fa-clock"></i>
+                      <div class="margin-div">10:00-22:00</div>
+                  </span>`;
+
+    function replaceContactRightContent() {
+        console.log(window.innerWidth);
+        if (window.innerWidth < 768) {
+            contactRightDiv.innerHTML = infoHTML;
+        } else {
+            // restore original content if width is greater than 792
+            contactRightDiv.innerHTML = originalContent;
+        }
+    }
+
+
+    replaceContactRightContent();
+    window.addEventListener('resize', replaceContactRightContent);
+
+</script>

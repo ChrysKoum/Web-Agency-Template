@@ -1,6 +1,3 @@
-//dimos
-
-//tomys
 (function () {
   ("use strict");
 
@@ -202,6 +199,37 @@
 
   video.addEventListener("click", () => (video.muted = !video.muted));
 
+  const flexContainer = document.querySelector(".flex-container");
+  const aboutUsText = document.querySelector("#about-us-text");
+  const videocontainer = document.querySelector(".video-container");
+
+  function video_hide() {
+    var viewportWidth =
+      window.innerWidth || document.documentElement.clientWidth;
+
+    if (window.innerWidth < 1000) {
+      videocontainer.remove();
+      flexContainer.appendChild(aboutUsText);
+    } else {
+      flexContainer.appendChild(aboutUsText);
+      flexContainer.appendChild(videocontainer);
+    }
+    /*
+    if (viewportWidth < 780) {
+      /*videocontainer.classList.add("display-none");
+      videocontainer.remove();
+    } else {
+      
+      videocontainer.classList.remove("display-none");
+    }*/
+  }
+
+  // Call the function on page load
+  video_hide();
+
+  // Call the function on window resize
+  window.addEventListener("resize", video_hide);
+
   const firstContainer = document.getElementById("s1");
   const thirdContainer = document.getElementById("projects");
 
@@ -211,6 +239,7 @@
         const videoTop = video.getBoundingClientRect().top;
         const firstTop = firstContainer.getBoundingClientRect().top;
         const thirdTop = thirdContainer.getBoundingClientRect().top;
+        const firstTopPlus = firstTop + 100;
 
         if (videoTop > firstTop && videoTop < thirdTop) {
           video.play();
@@ -224,6 +253,63 @@
   });
 
   observer.observe(video);
+
+  /**
+   * Click on page to start the Video
+   */
+  /*
+  const spanElement = document.querySelector("span");
+  if (window.scrollY < 50) {
+    spanElement.click();
+  }
+  */
+  const videoElement = document.getElementById("my-video");
+  const muteSpan = document.getElementById("mute-span");
+  const pauseSpan = document.getElementById("pause-span");
+  const videoContainer = document.querySelector(".video-container");
+
+  muteSpan.addEventListener("click", function (event) {
+    if (videoElement.classList.contains("mute")) {
+      videoElement.classList.remove("mute");
+      muteSpan.textContent = "Click left on the video to mute";
+    } else {
+      videoElement.classList.add("mute");
+      muteSpan.textContent = "Click left on the video to unmute";
+    }
+  });
+
+  pauseSpan.addEventListener("click", function (event) {
+    if (videoElement.paused) {
+      videoElement.play();
+      pauseSpan.textContent = "Click right on the video to pause";
+    } else {
+      videoElement.pause();
+      pauseSpan.textContent = "Click right on the video to play";
+    }
+  });
+
+  videoContainer.addEventListener("click", function (event) {
+    const xPosition =
+      event.clientX - videoContainer.getBoundingClientRect().left;
+
+    if (xPosition < videoContainer.offsetWidth / 2) {
+      if (videoElement.classList.contains("mute")) {
+        videoElement.classList.remove("mute");
+        muteSpan.textContent = "Click left on the video to mute";
+      } else {
+        videoElement.classList.add("mute");
+        muteSpan.textContent = "Click left on the video to unmute";
+      }
+    } else {
+      if (videoElement.paused) {
+        videoElement.play();
+        pauseSpan.textContent = "Click right on the video to pause";
+      } else {
+        videoElement.pause();
+        pauseSpan.textContent = "Click right on the video to play";
+      }
+    }
+  });
 
   /**
    * Project Image transition and
@@ -255,4 +341,20 @@
       }, 5000);
     });
   });
+  /*
+  function changeLanguage() {
+    var hero_title = document.getElementsByClassName("hero-title");
+    var eng = document.getElementById("ENG");
+    var gr = document.getElementById("GR");
+
+    if (title.innerHTML === "Perfection") {
+      hero_title.innerHTML = "Τελειότητα";
+      gr.classList.add("color-cyan");
+      eng.classList.remove("color-cyan");
+    } else {
+      hero_title.innerHTML = "Perfection";
+      gr.classList.remove("color-cyan");
+      eng.classList.add("color-cyan");
+    }
+  }*/
 })();
