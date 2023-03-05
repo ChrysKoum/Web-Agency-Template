@@ -10,6 +10,12 @@ body {
     background-color:#1C2541 ;
 }
 
+
+/* Footer */
+.col-3 img{
+    cursor: pointer;
+}
+
 .footer {
     background-color: #898989;
 }
@@ -35,9 +41,10 @@ body {
 }
 
 .HIRED-US {
-    transition: 0.3s;
+  transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,transform 0.25s;
     background-color: #070C1C;
-    color: #6FFFE9;
+    color: white;
+ 	 border: 2px solid;
     border-radius: 90px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -46,12 +53,15 @@ body {
 }
 
 .HIRED-US:hover {
-    color: white;
-    transform: translateY(-2px);
+    color: #6FFFE9;
+  	border-color: #6FFFE9;
+  	box-shadow: 0 0.5em 0.5em -0.4em #6FFFE9;
+    transform: translateY(-5px);
 }
 
-.footer-button-2 {
+.row .footer-button-2{
     background-color: #898989;
+	cursor: default;
     border: 0;
     color: #070C1C;
     font-weight: 400;
