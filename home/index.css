@@ -1,4 +1,7 @@
 
+::-webkit-scrollbar {
+  display: none;
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -97,9 +100,9 @@ body {
   border-radius: 50px;
   padding: 20px 30px;
   color: #0B132B;
-  width: 400px;
+  width: 450px;
   font-weight: bold;
-  transform: translateX(-55%);
+  transform: translateX(-70%);
   margin-top: 4.6rem;
   margin-bottom: 5rem;
   text-align: right;
@@ -107,30 +110,9 @@ body {
 }
 
 .hired-button:hover{
-	transform: translateX(-40%);
+	transform: translateX(-55%);
 }
 /*
-.video-container {
-  position: relative;
-   height: 400px; 
-   overflow: hidden; 
-}
-/*
-
-#video::before {
-  content: "";
-  position: absolute;
-  top: 100;
-  left: -50;
-  width: 65%;
-  height: 100%;
-  background: rgba(0, 0, 0, 1);
-  filter: blur(10px);
-  z-index: 0;
-}
-.my-video{
-  	transform: translateX(3%);
-}*/
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -141,26 +123,31 @@ body {
 }
 
 @media (min-width: 576px) {
-  .flex-container {
-    flex-direction: row;
-  }
   #about-us-text {
     order: 1;
   }
   .video-container {
     order: 2;
   }
-}
-
-.row {
-  flex-wrap: nowrap !important;
-}
-
+}*/
 .video-container {
   position: relative;
-  width: 950px;
-  height: 690px;
-  margin: 0 auto;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 56.25%; /*56.25 calculate by aspect ratio (h / w * 100%) */
+}
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*
+.video-container {
+  position: relative;
+  width: 80%;
+  height: 100%;
 }
 
 .my-video {
@@ -170,7 +157,7 @@ body {
   width: 100%;
   height: 100%;
 }
-
+*/
 #video-controls {
   position: absolute;
   bottom: 0;
@@ -190,6 +177,8 @@ body {
 #mute-span ,
 #pause-span{
 	cursor: pointer;
+	font-size: 0.9rem;
+	font-weight: 100;
 }
 #mute-span:hover ,
 #pause-span:hover{
@@ -1149,7 +1138,15 @@ a:hover {
 	.container .projects-button{
     	font-size: 1.5rem;
 	}
+	#video-controls #mute-span,#video-controls #pause-span {
+    	font-size: 0.7rem;
+	}
+	#about-us-text .hired-button {
+		transform: translateX(-20%);
+		width: 250px;
+	}
 }
+
 
 .hero-single .breadcrumb {
 	background-color: transparent;
@@ -1226,32 +1223,6 @@ a:hover {
 # About
 --------------------------------------------------------------*/
 
-.about-mf .about-img {
-	margin-bottom: 2rem;
-}
-.about-mf .about-img img {
-	margin-left: 10px;margin-top: 4rem;
-}
-@media (min-width: 767px) {
-	.about-mf .box-pl2 {
-		margin-top: 3rem;
-		padding-left: 0rem;
-	}
-}
-
-.skill-mf span {
-	color: #4e4e4e;
-}
-.skill-mf .progress {
-	background-color: #cde1f8;
-	margin: 0.5rem 0 1.2rem 0;
-	border-radius: 0;
-	height: 0.7rem;
-}
-.skill-mf .progress .progress-bar {
-	height: 0.7rem;
-	background-color: #6FFFE9;
-}
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -1419,9 +1390,10 @@ a:hover {
 }
 
 .HIRED-US {
-    transition: 0.3s;
+  transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,transform 0.25s;
     background-color: #070C1C;
-    color: #6FFFE9;
+    color: white;
+ 	 border: 2px solid;
     border-radius: 90px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -1430,14 +1402,26 @@ a:hover {
 }
 
 .HIRED-US:hover {
-    color: white;
-    transform: translateY(-2px);
+    color: #6FFFE9;
+  	border-color: #6FFFE9;
+  	box-shadow: 0 0.5em 0.5em -0.4em #6FFFE9;
+    transform: translateY(-5px);
 }
 
-.footer-button-2 {
+.row .footer-button-2{
     background-color: #898989;
+	cursor: default;
     border: 0;
     color: #070C1C;
     font-weight: 400;
 }
-
+/*
+.tooltip {
+    position: absolute;
+	cursor: default;
+    z-index: 1;
+	background-color: #555;
+    color: #fff;
+    padding: 5px;
+    border-radius: 6px;
+}*/

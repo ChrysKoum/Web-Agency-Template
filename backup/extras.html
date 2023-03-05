@@ -37,3 +37,41 @@
         </div>
     </div><!-- End Hero Section -->
 </body>
+<script>
+
+    const flexContainer = document.querySelector(".flex-container");
+    const aboutUsText = document.querySelector("#about-us-text");
+    const videocontainer = document.querySelector(".video-container");
+
+    /* Hide Video when width 768 and lower*/
+
+    function videoHide() {
+        if (window.innerWidth < 1000) {
+            videocontainer.remove();
+            flexContainer.appendChild(aboutUsText);
+        } else {
+            flexContainer.appendChild(aboutUsText);
+            flexContainer.appendChild(videocontainer);
+        }
+    }
+    // call the function initially to adjust the image
+    videoHide();
+
+    // call the function on window resize to adjust the image when the viewport width changes
+    window.addEventListener("resize", videoHide);
+
+    var mediaQuery = window.matchMedia("(max-width: 600px)");
+
+    // If the screen size is smaller than 600px, execute the function
+    if (mediaQuery.matches) {
+        videoHide();
+    }
+
+    // Listen for changes in screen size
+    mediaQuery.addListener(function (mq) {
+        // If the screen size is smaller than 600px, execute the function
+        if (mq.matches) {
+            videoHide();
+        }
+    });
+</script>

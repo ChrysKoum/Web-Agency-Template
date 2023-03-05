@@ -199,37 +199,6 @@
 
   video.addEventListener("click", () => (video.muted = !video.muted));
 
-  const flexContainer = document.querySelector(".flex-container");
-  const aboutUsText = document.querySelector("#about-us-text");
-  const videocontainer = document.querySelector(".video-container");
-
-  function video_hide() {
-    var viewportWidth =
-      window.innerWidth || document.documentElement.clientWidth;
-
-    if (window.innerWidth < 1000) {
-      videocontainer.remove();
-      flexContainer.appendChild(aboutUsText);
-    } else {
-      flexContainer.appendChild(aboutUsText);
-      flexContainer.appendChild(videocontainer);
-    }
-    /*
-    if (viewportWidth < 780) {
-      /*videocontainer.classList.add("display-none");
-      videocontainer.remove();
-    } else {
-      
-      videocontainer.classList.remove("display-none");
-    }*/
-  }
-
-  // Call the function on page load
-  video_hide();
-
-  // Call the function on window resize
-  window.addEventListener("resize", video_hide);
-
   const firstContainer = document.getElementById("s1");
   const thirdContainer = document.getElementById("projects");
 
@@ -239,7 +208,6 @@
         const videoTop = video.getBoundingClientRect().top;
         const firstTop = firstContainer.getBoundingClientRect().top;
         const thirdTop = thirdContainer.getBoundingClientRect().top;
-        const firstTopPlus = firstTop + 100;
 
         if (videoTop > firstTop && videoTop < thirdTop) {
           video.play();
@@ -341,6 +309,46 @@
       }, 5000);
     });
   });
+
+  /* Copy to clipboard when click on the gmail*/
+  /*
+  function copyToClipboard(text) {
+    // Create a temporary input element
+    var input = document.createElement("input");
+    input.setAttribute("value", text);
+    document.body.appendChild(input);
+
+    // Select the text in the input element
+    input.select();
+
+    // Copy the selected text to the clipboard
+    document.execCommand("copy");
+
+    // Remove the temporary input element
+    document.body.removeChild(input);
+
+    // Show a tooltip message to the user
+    var tooltip = document.createElement("div");
+    tooltip.setAttribute("class", "tooltip");
+    tooltip.innerHTML = "Text copied to clipboard!";
+    document.body.appendChild(tooltip);
+
+    // Position the tooltip message next to the button
+    var buttonRect = document
+      .querySelector(".footer-button-1")
+      .getBoundingClientRect();
+    var tooltipRect = tooltip.getBoundingClientRect();
+    tooltip.style.top = buttonRect.top - tooltipRect.height - 10 + "px";
+    tooltip.style.left =
+      buttonRect.left + (buttonRect.width - tooltipRect.width) / 2 + "px";
+
+    // Hide the tooltip message after 2 seconds
+    setTimeout(function () {
+      document.body.removeChild(tooltip);
+    }, 2000);
+  }*/
+
+  /* Makw the Gr to Eng work small example */
   /*
   function changeLanguage() {
     var hero_title = document.getElementsByClassName("hero-title");
