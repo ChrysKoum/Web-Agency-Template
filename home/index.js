@@ -202,22 +202,23 @@
   const firstContainer = document.getElementById("s1");
   const thirdContainer = document.getElementById("projects");
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const videoTop = video.getBoundingClientRect().top;
-        const firstTop = firstContainer.getBoundingClientRect().top;
-        const thirdTop = thirdContainer.getBoundingClientRect().top;
-
-        if (videoTop > firstTop && videoTop < thirdTop) {
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach(
+      (entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
           video.play();
         } else {
           video.pause();
         }
-      } else {
-        video.pause();
+      },
+      {
+        threeshold: 1,
+      },
+      {
+        rootMargin: "-500px",
       }
-    });
+    );
   });
 
   observer.observe(video);
