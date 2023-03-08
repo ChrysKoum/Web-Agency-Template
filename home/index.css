@@ -351,13 +351,14 @@ bottom: -18rem;
 }
 
 .hwork-title{
-  margin-top: 7rem;
+  font-size: 2.5rem;
+  margin-top: 8rem;
   margin-bottom: 4rem;
 }
 
 .hwork-button{
 	display: block;
-  font-size: 1.5rem;
+    font-size: 2rem;
   background-color: #6FFFE9;
   border-radius: 50px;
   padding: 15px 25px;
@@ -437,7 +438,9 @@ bottom: -18rem;
   color: #6FFFE9;
 }
 .hwork-par{
-  padding-bottom: 8rem;
+	font-size: 1.2rem;
+  color: #c6c6c6;
+  padding-bottom: 11rem;
 
 }
 /*End How we Work*/
@@ -445,7 +448,7 @@ bottom: -18rem;
   display: block;
 }
  /*--------------------------------------------------------------
-# Mine
+# End Mine
 --------------------------------------------------------------*/
 a {
 	color: #1e1e1e;
@@ -835,7 +838,7 @@ a:hover {
 	align-items: center;
 	justify-content: space-between;
 	color: #fff;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 	font-weight: 600;
 	padding: 0;
 	white-space: nowrap;
@@ -1136,6 +1139,22 @@ a:hover {
 	#video-controls #mute-span,#video-controls #pause-span {
     	font-size: 0.7rem;
 	}
+	.container .hwork-title{
+		font-size: 1.5rem;
+	}
+	.container .hwork-button{ 
+   	 margin-top: 2rem;
+    margin-bottom: 5rem;
+		font-size: 1.5rem;
+	}
+
+	.container .hwork-par{
+		font-size: 1rem;
+    	padding-bottom: 13rem;
+	}
+	.hwork-title br {
+    	display: none;
+  	}
 }
 
 
@@ -1208,149 +1227,6 @@ a:hover {
     top: 90%;
     opacity: 0;
   }
-}
-
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------
-# Portfolio
---------------------------------------------------------------*/
-
-
-.work-box {
-	margin-bottom: 3rem;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	background-color: #fff;
-}
-.work-box:hover img {
-	transform: scale(1.3);
-}
-
-.work-box {
-	border: solid 0px white;
-	transition: border-width 0.6s linear;
-}
-
-.work-box:hover {
-	border-width: 5px;
-}
-
-.work-img {
-	display: block;
-	overflow: hidden;
-}
-.work-img img {
-	transition: all 1s;
-}
-
-.work-content {
-	padding: 2rem 3% 1rem 4%;
-}
-.work-content .w-more {
-	color: #4e4e4e;
-	font-size: 0.8rem;
-}
-.work-content .w-more .w-ctegory {
-	color: #6FFFE9;
-}
-.work-content .w-like {
-	font-size: 2.5rem;
-	color: #6FFFE9;
-	float: right;
-}
-.work-content .w-like a {
-	color: #6FFFE9;
-}
-.work-content .w-like .num-like {
-	font-size: 0.7rem;
-}
-
-.w-title {
-	font-size: 1.2rem;
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-	padding-top: 40px;
-}
-.portfolio-details .portfolio-details-slider img {
-	width: 100%;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-	margin-top: 20px;
-	position: relative;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-	width: 12px;
-	height: 12px;
-	background-color: #fff;
-	opacity: 1;
-	border: 1px solid #6FFFE9;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-	background-color: #6FFFE9;
-}
-.portfolio-details .portfolio-info {
-	padding: 30px;
-	box-shadow: 0px 0 30px rgba(78, 78, 78, 0.08);
-}
-.portfolio-details .portfolio-info h3 {
-	font-size: 22px;
-	font-weight: 700;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
-	border-bottom: 1px solid #eee;
-}
-.portfolio-details .portfolio-info ul {
-	list-style: none;
-	padding: 0;
-	font-size: 15px;
-}
-.portfolio-details .portfolio-info ul li + li {
-	margin-top: 10px;
-}
-.portfolio-details .portfolio-description {
-	padding-top: 30px;
-}
-.portfolio-details .portfolio-description h2 {
-	font-size: 26px;
-	font-weight: 700;
-	margin-bottom: 20px;
-}
-.portfolio-details .portfolio-description p {
-	padding: 0;
-}
-
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-.footer-paralax {
-	padding: 4rem 0 0 0;
-}
-
-.contact-mf {
-	margin-top: 4rem;
-}
-@media (min-width: 767px) {
-	.contact-mf .box-pl2 {
-		margin-top: 3rem;
-		padding-left: 0rem;
-	}
-}
-
-/*--------------------------------------------------------------
-# Get in Touch
---------------------------------------------------------------*/
-@media (max-width: 768px) {
-	#ulsocials {
-		text-align: center;
-	}
 }
 
 /*--------------------------------------------------------------
