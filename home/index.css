@@ -20,6 +20,14 @@ body {
 	height: 3rem ;
 }
 
+#ENG{
+	color: #6FFFE9;
+}
+
+#GR{
+	color: white;
+}
+
 .color-cyan{
 	color: #6FFFE9;
 }
@@ -138,21 +146,26 @@ body {
 }
 .video-container video {
   position: absolute;
-  top: 47px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-
+@media (max-width: 786px) {
+	.video-container #video-controls {
+		bottom: 0;
+	}
+}
 @media (max-width: 600px) {
 	.video-container video {
 		top: 0;
 	}
 }
 
+
 #video-controls {
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   left: 0;
   right: 0;
   height: 40px;
@@ -437,6 +450,7 @@ bottom: -18rem;
 .hwork-title span{
   color: #6FFFE9;
 }
+
 .hwork-par{
 	font-size: 1.2rem;
   color: #c6c6c6;

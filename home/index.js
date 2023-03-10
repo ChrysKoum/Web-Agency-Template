@@ -199,86 +199,33 @@
 
   video.addEventListener("click", () => (video.muted = !video.muted));
 
-  const firstContainer = document.getElementById("s1");
-  const thirdContainer = document.getElementById("projects");
-
-  let observer = new IntersectionObserver((entries) => {
-    entries.forEach(
-      (entry) => {
-        console.log(entry);
-        if (entry.isIntersecting) {
-          video.play();
-        } else {
-          video.pause();
-        }
-      },
-      {
-        threeshold: 1,
-      },
-      {
-        rootMargin: "-500px",
+  function handler(entries, observer) {
+    for (entry of entries) {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        video.play();
+      } else {
+        video.pause();
       }
-    );
+    }
+  }
+  /*
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  });
+*/
+  let observer = new IntersectionObserver(handler, {
+    threshold: [0.5],
   });
 
   observer.observe(video);
-
-  /**
-   * Click on page to start the Video
-   */
-  /*
-  const spanElement = document.querySelector("span");
-  if (window.scrollY < 50) {
-    spanElement.click();
-  }
-  */
-  const videoElement = document.getElementById("my-video");
-  const muteSpan = document.getElementById("mute-span");
-  const pauseSpan = document.getElementById("pause-span");
-  const videoContainer = document.querySelector(".video-container");
-
-  muteSpan.addEventListener("click", function (event) {
-    if (videoElement.classList.contains("mute")) {
-      videoElement.classList.remove("mute");
-      muteSpan.textContent = "Click left on the video to mute";
-    } else {
-      videoElement.classList.add("mute");
-      muteSpan.textContent = "Click left on the video to unmute";
-    }
-  });
-
-  pauseSpan.addEventListener("click", function (event) {
-    if (videoElement.paused) {
-      videoElement.play();
-      pauseSpan.textContent = "Click right on the video to pause";
-    } else {
-      videoElement.pause();
-      pauseSpan.textContent = "Click right on the video to play";
-    }
-  });
-
-  videoContainer.addEventListener("click", function (event) {
-    const xPosition =
-      event.clientX - videoContainer.getBoundingClientRect().left;
-
-    if (xPosition < videoContainer.offsetWidth / 2) {
-      if (videoElement.classList.contains("mute")) {
-        videoElement.classList.remove("mute");
-        muteSpan.textContent = "Click left on the video to mute";
-      } else {
-        videoElement.classList.add("mute");
-        muteSpan.textContent = "Click left on the video to unmute";
-      }
-    } else {
-      if (videoElement.paused) {
-        videoElement.play();
-        pauseSpan.textContent = "Click right on the video to pause";
-      } else {
-        videoElement.pause();
-        pauseSpan.textContent = "Click right on the video to play";
-      }
-    }
-  });
 
   /**
    * Project Image transition and
@@ -347,23 +294,5 @@
     setTimeout(function () {
       document.body.removeChild(tooltip);
     }, 2000);
-  }*/
-
-  /* Makw the Gr to Eng work small example */
-  /*
-  function changeLanguage() {
-    var hero_title = document.getElementsByClassName("hero-title");
-    var eng = document.getElementById("ENG");
-    var gr = document.getElementById("GR");
-
-    if (title.innerHTML === "Perfection") {
-      hero_title.innerHTML = "Τελειότητα";
-      gr.classList.add("color-cyan");
-      eng.classList.remove("color-cyan");
-    } else {
-      hero_title.innerHTML = "Perfection";
-      gr.classList.remove("color-cyan");
-      eng.classList.add("color-cyan");
-    }
   }*/
 })();

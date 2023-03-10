@@ -1,0 +1,41 @@
+#ENG{
+	color:white;
+}
+
+#GR{
+	color: #6FFFE9;
+}
+
+.hero .hero-subtitle {
+    font-size: 3.5rem;
+}
+
+.contact-button {
+    font-size: 1.2rem;
+}
+
+.about-title {
+    font-size: 3rem;
+}
+
+.hired-button {
+    font-size: 1.5rem;
+    transform: translateX(-59%);
+}
+
+.hired-button:hover {
+    transform: translateX(-50%);
+}
+
+.projects-title {
+    font-size: 3.5rem;
+}
+
+.hwork-button {
+    font-size: 1.6rem;
+}
+
+#video-controls {
+    position: absolute;
+    bottom: 50px;
+}
