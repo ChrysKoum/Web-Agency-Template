@@ -472,12 +472,13 @@ h2:hover {
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    transition: 0.5s;
   }
 
   .blue-button:hover {
     border: 3px solid #68DCCB;
     color: #68DCCB;
-    background-color: white;
+    background-color: #070C1C;
   }
 
 
