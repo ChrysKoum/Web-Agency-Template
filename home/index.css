@@ -61,11 +61,18 @@ body {
 	border-radius: 8%;
 }
 
+@media (max-width: 990px)  {
+	#GR{
+		color: #787878;
+	}
+}
+
 @media (max-width: 600px)  {
     
   .hero-subtext, .hero-title{
 	font-size: 2rem;
   }
+
 }
 
 /* About Section*/
@@ -850,7 +857,7 @@ a:hover {
 .navbar a:focus {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+    justify-content: center;
 	color: #fff;
     font-size: 1.2rem;
 	font-weight: 600;
@@ -948,7 +955,7 @@ a:hover {
 }
 @media (max-width: 990px) {
 	.navbar ul {
-		height: 190px;
+		height: 224px;
 	}
 }
 
@@ -1002,7 +1009,7 @@ a:hover {
 	bottom: 15px;
 	left: 15px;
 	padding: 10px 0;
-	background-color: #fff;
+	background-color: #0B132B;
 	overflow-y: auto;
 	transition: 0.3s;
 }
@@ -1018,7 +1025,7 @@ a:hover {
 .navbar-mobile a:focus {
 	padding: 10px 20px;
 	font-size: 15px;
-	color: #4e4e4e;
+	color: #787878;
 }
 .navbar-mobile a:hover,
 .navbar-mobile .active,
