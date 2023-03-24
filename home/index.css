@@ -16,7 +16,7 @@ body {
 # Our Team
 --------------------------------------------------------------*/
 #team {
-	background-color: #0B132B;
+	background-color: #070C1C;
 }
 
 #team .row{
@@ -113,8 +113,17 @@ ul.social li a {
 	#team .row{
 		height: auto;
 	}
+	#team .row .width-fix{
+		width: 50%;
+	}
 }
 
+@media (max-width: 550px)  {
+
+	#team .row .width-fix{
+		width: 80%;
+	}
+}
 /*--------------------------------------------------------------
 # End Our Team
 --------------------------------------------------------------*/
