@@ -7,6 +7,13 @@ body {
 	margin: 0;
 	padding: 0;
 }
+#header {
+	padding: 1rem;
+	background-color: #aaa;
+    padding-right: 7rem;
+	z-index: 1;
+}
+
 html,
     body {
         width: 100%;
@@ -48,7 +55,6 @@ html,
 # Mine
 --------------------------------------------------------------*/
 .navbar-brand img{
-    margin-top: 2rem;
 	width: 4rem ;
 	height: 3rem ;
 }
@@ -58,7 +64,7 @@ html,
 }
 
 .contact-title{
-    margin-top: 2rem;
+    margin-top: 7rem;
     font-size: 3.5em;
 }
 

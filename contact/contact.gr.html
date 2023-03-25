@@ -21,18 +21,38 @@
     <script src="https://kit.fontawesome.com/9b12e39ef1.js" crossorigin="anonymous"></script>
 
     <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="../home/index.css">
     <link href="contact.css" rel="stylesheet">
 
 </head>
 
 <body>
+    <header id="header" class="fixed-top">
+        <div class="container d-flex">
+            <a class="navbar-brand" href="#">
+                <img src="../logo/logo.png" alt="" class="d-inline-block">
+            </a>
+            <nav id="navbar" class="navbar ms-auto">
+                <ul>
+                    <li><a class="nav-link scrollto" href="../lg/gr.html">ΑΡΧΙΚΗ</a></li>
+                    <li><a class="nav-link scrollto" href="../lg/gr.html#about">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</a></li>
+                    <li><a class="nav-link scrollto" href="../projects/projects.gr.html">PROJECTS</a></li>
+                    <li><a class="nav-link scrollto active" href="../how we work/howwework.gr.html">ΠΩΣ ΔΟΥΛΕΥΟΥΜΕ</a>
+                    </li>
+                    <li><a id="language-switch" class="nav-link scrollto" href="contact.html">
+                            <span id="ENG" style="color: white;">ENG</span>
+                            <span id="GR" style="color: aqua;">/GR</span></a>
+                    </li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- End navbar -->
+        </div>
+    </header><!-- End Header -->
+
     <div class="container-contact">
         <div class="row">
             <div id="space-left" class="col-md-1"></div>
             <div class="col-md-6">
-                <a class="navbar-brand" href="../lg/gr.html">
-                    <img src="/logo/logo.png" alt="" class="d-inline-block align-text-top">
-                </a>
                 <h1 class="contact-title">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ</h1>
                 <p class="contact-par">Ο <span>καλύτερος</span> τρόπος για να λύσετε όλες τις απορίες σας</p>
                 <form action="https://formspree.io/f/xoqzwlnp" method="POST">

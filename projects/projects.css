@@ -10,8 +10,8 @@ body {
     background-color:#1C2541 ;
 }
 
-.playfull-bar{
-    margin-top: 2rem;
+#playfull-bar .row{
+    margin-top: 6rem;
 }
 
 /*--------------------------------------------------------------
@@ -20,7 +20,7 @@ body {
 #header {
 	transition: all 0.5s;
 	z-index: 997;
-	padding: 0;
+	padding: 1rem;
 }
 #header .logo {
 	font-size: 28px;
@@ -37,7 +37,7 @@ body {
 }
 #header.header-scrolled {
 	background: rgba(0, 0, 0, 0.9);
-	padding: 0;
+	padding: 0.6rem;
 }
 
 /*--------------------------------------------------------------

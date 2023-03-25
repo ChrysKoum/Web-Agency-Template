@@ -5,12 +5,18 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
+    background-color: white;
+}
+
+#header {
+    background-color: rgba(138, 138, 138,0.5);
+    padding: 0.6rem;
 }
 /*--------------------------------------------------------------
 # First Page
 --------------------------------------------------------------*/
 .container-fluid h1 {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: lighter;
 }
 
@@ -33,7 +39,7 @@ h2 {
 }
 
 .paragraph {
-    font-size: 2em;
+    font-size: 1.5rem;
 }
 
 /*first box*/
@@ -48,6 +54,7 @@ h2 {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  margin-top: 3rem;
 }
 
 #first img{
@@ -78,7 +85,9 @@ h2 {
     display: flex;
     flex-direction: column;
   }
-  
+  #second_tittle {
+    padding-left: 3rem;
+}
   #second_tittle, .text-order {
     order: 2;
   }
@@ -122,10 +131,9 @@ h2 {
 }
 #second_tittle {
     align-items: center;
-
 }
 #goals {
-    width: 11em;
+    width: 11rem;
     height: 9.5rem;
 }
 .cyan {
@@ -140,7 +148,7 @@ h2 {
   padding: 2rem;
 }
 #face {
-    width: 11em;
+    width: 11rem;
     height: 9.5rem;
 }
 #third_tittle {
@@ -181,7 +189,7 @@ h2 {
   background-color: #1C2541;
   position: absolute;
   left: 49.2%;
-    bottom: 18px;
+  bottom: 54px;
   border-radius: 50px;
   cursor: pointer;
 }
