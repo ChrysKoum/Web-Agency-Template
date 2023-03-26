@@ -348,12 +348,16 @@ ul.social li a {
 .image-container img {
   width: 50%;
   object-fit: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 90%);
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
   transition: all 1s ease-out; /* add transition property here */
+}
+
+.image-container .crop-75{
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
 }
 
 .image-container.hover img,
