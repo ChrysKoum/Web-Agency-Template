@@ -69,6 +69,10 @@ h2 {
   }
 }
 
+#line {
+      display: block;
+    }
+
 @media only screen and (max-width: 780px)  {
     .container-fluid h1{
         text-decoration: underline;
@@ -99,8 +103,21 @@ h2 {
   #second_paragraph {
     order: 3;
   }
-}
 
+  .col-md-2 .image-steps img:first-child {
+    width: 8em;
+    height: 12rem;
+    }
+  
+    .description-box{
+        font-size: 1rem;
+    }
+
+    #line {
+      display: none;
+    }
+  
+}
 /*
 @media (max-width: 1150px) {
     #first_paragraph{
@@ -415,21 +432,9 @@ h2:hover {
     margin-bottom: 101px;
 }
 
-#line {
-    width: 10px;
-    height: 10px;
-    background-color: #1C2541;
-    position:static;
-}
-
-#image {
-    background-image: url("path/to/your/image.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
 .steps-content {
     margin-top: 5%;
+    padding: 0rem 1rem;
 }
 
 #first-tittle-steps {

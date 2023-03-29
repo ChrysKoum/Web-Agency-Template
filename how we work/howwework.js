@@ -88,13 +88,15 @@ function debounce(func, wait = 5, immediate = true) {
 }
 
 /* Remove img-fluid and hide line page*/
+/*
 function adjustImage() {
-  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   let stepsContent = document.getElementsByClassName("image-steps");
   for (var i = 0, len = stepsContent.length; i < len; i++) {
     var img = stepsContent[i].querySelectorAll("img");
     var firstImg = img[0];
     var secondImg = img[1];
+    console.log(secondImg);
     if (viewportWidth < 780) {
       firstImg.classList.remove("img-fluid");
       secondImg.style.display = "none";
@@ -110,3 +112,4 @@ adjustImage();
 
 // call the function on window resize to adjust the image when the viewport width changes
 window.addEventListener("resize", adjustImage);
+*/
