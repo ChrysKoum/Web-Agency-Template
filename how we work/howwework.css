@@ -91,19 +91,18 @@ h2 {
   }
   #second_tittle {
     padding-left: 3rem;
-}
-  #second_tittle, .text-order {
-    order: 2;
-  }
-  
-  #goals, .img-order {
-    order: 1;
-  }
-  
-  #second_paragraph {
-    order: 3;
-  }
-
+    }
+    #second_tittle, .text-order {
+        order: 2;
+    }
+    
+    #goals, .img-order {
+        order: 1;
+    }
+    
+    #second_paragraph {
+        order: 3;
+    }
   .col-md-2 .image-steps img:first-child {
     width: 8em;
     height: 12rem;
