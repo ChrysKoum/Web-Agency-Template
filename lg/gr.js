@@ -10,10 +10,10 @@ const videoContainer = document.querySelector(".video-container");
 muteSpan.addEventListener("click", function (event) {
   if (videoElement.classList.contains("mute")) {
     videoElement.classList.remove("mute");
-    muteSpan.textContent = "Κάντε κλικ αριστερά στο βίντεο για σίγαση";
+    muteSpan.textContent = "Κάντε κλικ αριστερά στο βίντεο για ήχο";
   } else {
     videoElement.classList.add("mute");
-    muteSpan.textContent = "Κάντε κλικ αριστερά στο βίντεο για ήχο";
+    muteSpan.textContent = "Κάντε κλικ αριστερά στο βίντεο για σίγαση";
   }
 });
 
@@ -33,10 +33,10 @@ videoContainer.addEventListener("click", function (event) {
   if (xPosition < videoContainer.offsetWidth / 2) {
     if (videoElement.classList.contains("mute")) {
       videoElement.classList.remove("mute");
-      muteSpan.textContent = "Κάντε κλικ αριστερά στο βίντεο για σίγαση";
+      muteSpan.textContent = "Κάντε κλικ αριστερά στο βίντεο για ήχο";
     } else {
       videoElement.classList.add("mute");
-      muteSpan.textContent = "Κάντε κλικ αριστερά στο βίντεο για ήχο";
+      muteSpan.textContent = "Κάντε κλικ αριστερά στο βίντεο για σίγαση";
     }
   } else {
     if (videoElement.paused) {

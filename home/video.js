@@ -10,10 +10,10 @@ const videoContainer = document.querySelector(".video-container");
 muteSpan.addEventListener("click", function (event) {
   if (videoElement.classList.contains("mute")) {
     videoElement.classList.remove("mute");
-    muteSpan.textContent = "Click left on the video to mute";
+    muteSpan.textContent = "Click left on the video to unmute";
   } else {
     videoElement.classList.add("mute");
-    muteSpan.textContent = "Click left on the video to unmute";
+    muteSpan.textContent = "Click left on the video to mute";
   }
 });
 
@@ -33,10 +33,10 @@ videoContainer.addEventListener("click", function (event) {
   if (xPosition < videoContainer.offsetWidth / 2) {
     if (videoElement.classList.contains("mute")) {
       videoElement.classList.remove("mute");
-      muteSpan.textContent = "Click left on the video to mute";
+      muteSpan.textContent = "Click left on the video to unmute";
     } else {
       videoElement.classList.add("mute");
-      muteSpan.textContent = "Click left on the video to unmute";
+      muteSpan.textContent = "Click left on the video to mute";
     }
   } else {
     if (videoElement.paused) {
