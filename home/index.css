@@ -1439,3 +1439,13 @@ a:hover {
     padding: 5px;
     border-radius: 6px;
 }*/
+
+.after-footer {
+	background-color: #070C1C;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+.after-footer a{
+	color: #6FFFE9;
+}

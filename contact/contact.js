@@ -8,7 +8,7 @@ const infoHTML = `<h3 class="mb-4">Πληροφορίες</h3>
                   </span>
                   <span class="d-flex">
                       <i class="fa-sharp fa-solid fa-phone"></i>
-                      <div class="margin-div">+306940524924</div>
+                      <div class="margin-div">+306900000000</div>
                   </span>
                   <span class="d-flex">
                       <i class="fa-sharp fa-solid fa-location-dot"></i>
